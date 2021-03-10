@@ -1,0 +1,166 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+     background:hsl(240, 73%, 65%);
+     background:linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding-top: 30px;
+}
+
+.container{
+     position: relative;
+     width: 340px;
+     background:#fff;
+     border-radius: 20px;
+     text-align: center;
+     margin: 100px 0;
+     min-height: 550px;
+     max-height: 550px;
+}
+
+.container .images .mobile img{
+     position: absolute;
+     top: -110px;
+     left: 50%;
+     transform: translateX(-55%);
+}
+.container .images .mobile .patter-img{
+     top:0;
+}
+
+.container .faq-container{
+     padding:120px 30px;
+}
+
+
+
+.container .faq-container .title{
+     margin-bottom: 20px;
+     transition: .3s all linear;
+}
+
+
+.container .faq-container .faq{
+     border-bottom: 1px solid hsl(240, 5%, 91%);
+     margin-bottom: 20px;
+     z-index: 1000;
+     height: 50px;
+     background: #fff;
+     transition: .3s height linear;
+}
+
+.container .faq-container .faq .question{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 14px;
+     color:hsl(238, 29%, 16%);
+     z-index: 9999;
+     padding-bottom: 20px;
+}
+.container .faq-container .faq .question img{
+     transition: .3s transform linear;
+     cursor: pointer;
+}
+.container .faq-container .faq .question p{
+     cursor: pointer;
+}
+
+.container .faq-container .faq .answer{
+     opacity: 1;
+     text-align: start;
+     color:hsl(240, 6%, 50%);
+     font-size: 14px;
+     transition: .3s all linear;
+     transform: translateY(-15px);
+     z-index: -1;
+}
+.container .faq-container .faq .question p:hover{
+     color: hsl(14, 88%, 65%);
+}
+
+
+
+.attribution{
+     background:rgba(255, 0, 119);
+     width: 100%;
+     padding: 15px 0;
+     color: #fff;
+}
+
+.attribution a{
+     color: #000;
+}
+
+
+
+/* Javacsript add class */
+.container .faq-container .faq .answer_off{
+     opacity: 0;
+     transform: translateY(-20px);
+     z-index: -1;
+     cursor: default;
+}
+
+.faq-on{
+     height: 100px;
+}
+
+
+.desktop{
+     display: none;
+}
+
+@media screen and (min-width: 768px){
+     .container{
+          width: 75%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+     }
+     .container .faq-container{
+          width: 50%;
+          float: right;
+     }
+     .container .images{
+          width: 50%;
+          overflow: hidden;
+     }
+     .mobile{
+          display: none;
+     }
+     .desktop{
+          display: block;
+     }
+     .desktop img{
+          position: relative;
+          left: 0;
+          top: 0;
+          width: auto;
+     }
+
+     .desktop .img-box{
+          position: absolute;
+          top: 40%;
+          left: -95px;
+          z-index: 9999;
+     }
+     .desktop .women-img{
+          transform: translate(-15%,130%);
+          float: left;
+          z-index: 9998;
+     }
+     .desktop .pattern-desk{
+          left: -500px;
+          top: -250px;
+     }
+}
